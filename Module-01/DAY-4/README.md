@@ -1,70 +1,67 @@
-# Ex.No:1(D) ARRAYS
-
-## QUESTION:
-Write a Java Program to Find the Average of Array Elements.
+# Ex.No:1(D) USER DEFINED METHOD.
 
 ## AIM:
-To write a Java Program to Find the Average of Array Elements.
+To write a Java program to calculate and print the area of a circle by defining an instance method and using local variables. The class name is Area, the method name is calculateArea(), and the return type is void.
 
 ## ALGORITHM :
 1. Start the program.
 
-2. Import the java.util.Scanner package.
+2. Import the `java.util` package.
 
-3. Read an integer n from the user.
+3. Define a class named `Area`.
 
-4. Initialize factorial to 1.
+4. Declare an instance method named `calculateArea()` with return type `void`.
 
-5. Use a loop from 1 to n, multiplying each value with factorial.
+5. Inside the method:
+   
+   a) Create a `Scanner` object to read user input.
+   
+   b) Declare local variables `radius` and `cirarea`.
+   
+   c) Read the radius value from the user.
+   
+   d) Calculate the area using the formula `3.14 * radius * radius`.
+   
+   e) Print the calculated area.
 
-6. Print the final factorial value and end the program.
+6. In the `main` method:
+   
+   a) Create an object of the `Area` class.
+   
+   b) Call the `calculateArea()` method using the object.
 
-
+7. End the program.
 
 ## PROGRAM:
  ```
 /*
-Program to implement a Array concept using Java
+Program to implement a User Defined Method using Java
 Developed by: Harshini R
 RegisterNumber: 212223220033
 */
 ```
 
-## SOURCE CODE:
-
-```
-import java.util.Scanner;
-
-public class AverageArray {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        int n = sc.nextInt();
-        int[] arr = new int[n];
-        int sum = 0;
-
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
-            sum += arr[i];
-        }
-
-        double avg = (double) sum / n;
-        System.out.printf("The average of elements is %.2f\n", avg);
+## Sourcecode.java:
+```   
+import java.util.*;
+public class Area {
+        double calculateArea()
+    {
+        double radius,cirarea;
+        Scanner sc=new Scanner(System.in);
+        radius=sc.nextDouble();
+        cirarea=3.14*radius*radius;
+        return cirarea;
+    }
+        public static void main(String[] args) {
+       Area obj=new Area();
+       double area=obj.calculateArea();
+       System.out.println("Area of Circle is "+area);
     }
 }
-
 ```
-
 ## OUTPUT:
-
-<img width="832" height="587" alt="Screenshot 2025-11-14 082251" src="https://github.com/user-attachments/assets/41d1739f-9cf5-4171-a910-eb76447975b3" />
-
+![image](https://github.com/user-attachments/assets/ed252e49-6612-47ca-b513-113432021f3c)
 
 ## RESULT:
-The program successufully writes a Java Program to Find the Average of Array Elements.
-
-
-
-
-
-
+Thus, the Java program to calculate the area of a circle using an instance method and local variables with a void return type is successfully created and executed.
