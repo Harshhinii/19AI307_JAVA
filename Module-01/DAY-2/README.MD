@@ -24,19 +24,40 @@ b)	If the condition is false, print "false" using the 'print' method of 'System.
  ```
 /*
 Program to implement a variable and operators using Java
-Developed by: 
-RegisterNumber:  
+Developed by: Harshini R
+RegisterNumber:  212223220033
 */
 ```
 
 ## Sourcecode.java:
-
-
-
-
-
-
-
+```
+import java.util.Scanner;
+public class main{
+    public static void main(String[] args){
+        Scanner sc= new Scanner(System.in);
+        
+        int age=sc.nextInt();
+        int distance=sc.nextInt();
+        
+        int fare;
+        
+        if(age<12){
+            fare=distance*5;
+        }else if(age>60){
+            fare=distance*7;
+        }else{
+            int travelclass=sc.nextInt();
+            
+            if(travelclass==1){
+                fare=distance*10;
+            }else{
+                fare=distance*15;
+            }
+        }
+        System.out.println(fare);
+    }
+}
+```
 ## OUTPUT:
 
 
