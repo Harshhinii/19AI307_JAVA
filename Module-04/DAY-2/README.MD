@@ -19,30 +19,68 @@ To create  a Java program to perform the inheritance concept for employee detail
 -	c) Call `display()` to output employee details
 5.	End
 
-
-
-
-
-
-
-
 ## PROGRAM:
  ```
 /*
 Program to implement a Inheritance using Java
-Developed by: 
-RegisterNumber:  
+Developed by: Harshini R
+RegisterNumber: 212223220033
 */
 ```
 
 ## Sourcecode.java:
+```
+import java.util.Scanner;
 
+class Employee {
+    String name;
+    int empID;
 
+    void setDetails(String name, int empID) {
+        this.name = name;
+        this.empID = empID;
+    }
 
+    void displayDetails() {
+        System.out.print("Name: " + name);
+        System.out.print("Emp_ID: " + empID);
+    }
+}
 
+class Department extends Employee {
+    String departmentName;
 
+    void setDepartment(String departmentName) {
+        if (departmentName.equalsIgnoreCase("Software Developer")) {
+            this.departmentName = "Software";
+        } else {
+            this.departmentName = departmentName;
+        }
+    }
 
+    void displayDepartmentDetails() {
+        displayDetails();
+        System.out.println("Department: " + departmentName);
+    }
+}
 
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        Department employee = new Department();
+
+        String name = scanner.nextLine();
+        int empID = scanner.nextInt();
+        scanner.nextLine();  // Consume the newline l;
+        String department = scanner.nextLine();
+
+        employee.setDetails(name, empID);
+        employee.setDepartment(department);
+        employee.displayDepartmentDetails();
+    }
+}
+```
 ## OUTPUT:
 
 
